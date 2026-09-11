@@ -23,13 +23,15 @@ LIMIT 10
 )
 
 SELECT
-    tpj.*,
-    skills
+    skills,
+    count (*) AS Number_of_appearance 
 FROM 
     top_paying_jobs tpj, skills_job_dim sjd, skills_dim sd
 WHERE
     tpj.job_id = sjd.job_id AND sjd.skill_id = sd.skill_id
+GROUP BY 
+    skills    
 ORDER BY 
-    salary_year_avg DESC
+    Number_of_appearance DESC
 
 
