@@ -1,5 +1,5 @@
 /*
-Question: What skills are required for the top-paying data analyst jobs that are remote?
+Skills required for the top-paying data analyst jobs that are remote.
 */
 
 WITH top_paying_jobs AS (
