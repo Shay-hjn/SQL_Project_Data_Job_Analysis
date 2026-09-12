@@ -12,14 +12,14 @@
 - [Key Findings](#key-findings)
 - [Connect With Me](#connect-with-me)
 
-## 📖 Overview
+##  Overview
 This project analyzes the data job market, with a focus on Data Analyst roles, using the public dataset from Luke Barousse's [SQL for Data Analytics course](https://lukebarousse.com/sql) (real 2023 job postings).
 
 The course's own project covers two standard exercises — the highest-paying remote jobs and the skills behind them (Queries 1–2 below). I used those as a starting point, then designed **8 additional original queries (3–10)** to dig further: how Data Analyst roles compare to Data Scientist and Data Engineer roles market-wide, monthly hiring trends, top hiring companies, remote vs. non-remote pay, whether degree requirements affect salary, top hiring locations, where postings are sourced from, and which broad skill categories dominate.
 
 In total, the analysis covers **~556,000 job postings** across the three roles compared in Query 3 (Data Analyst, Data Scientist, and Data Engineer).
 
-## 🗄️ Database Schema
+##  Database Schema
 ![Database Schema ERD](ERD/ERD.PNG)
 
 The database is structured using a relational model consisting of one central fact table and three supporting dimension tables:
@@ -29,12 +29,12 @@ The database is structured using a relational model consisting of one central fa
 - **`skills_dim`**: A dimension table cataloging a unique list of technical skills and their respective categories (e.g., programming languages, databases).
 - **`skills_job_dim`**: A junction (bridge) table that resolves the many-to-many relationship between job postings and skills.
 
-## 🛠️ Tools Used
+##  Tools Used
 - **SQL (PostgreSQL):** database creation, table design, and analysis using CTEs, explicit joins (INNER/LEFT), conditional aggregation (`CASE` + `GROUP BY`), correlated subqueries, and date functions (`DATE_TRUNC`).
 - **VS Code:** IDE for writing and running SQL scripts.
 - **Git & GitHub:** version control and repository hosting.
 
-## 📊 SQL Queries and Results
+##  SQL Queries and Results
 
 ### 1. Top-Paying Data Analyst Jobs
 **Goal**: Identify the highest-paying remote Data Analyst roles and their respective companies.
@@ -145,7 +145,7 @@ The database is structured using a relational model consisting of one central fa
 | Libraries | 17,277 | 41 | 8.79% |
 | Other | 14,565 | 21 | 7.41% |
 
-## 🚀 How to Run the Project
+##  How to Run the Project
 
 ### 1. Prerequisites
 Ensure you have **PostgreSQL** installed and configured on your machine.
@@ -160,14 +160,14 @@ This project uses the dataset from Luke Barousse's [SQL for Data Analytics cours
 
 ### 4. Load the Data
 - Open `sql_load/3_modify_tables.sql`.
-- **⚠️ Important:** Before running this script, you must update the `COPY` absolute file paths in the script to match the directory where you saved the downloaded `.csv` files on your local machine.
+- ** Important:** Before running this script, you must update the `COPY` absolute file paths in the script to match the directory where you saved the downloaded `.csv` files on your local machine.
 - Execute the script to populate the tables.
 
 ### 5. Run the Analysis
 - Execute the `.sql` scripts located in the `project_sql/` folder to generate the insights.
 - The results of these queries are also pre-saved in the `Analysis_Results/` folder for quick viewing.
 
-## 💡 Key Findings
+##  Key Findings
 
 * **Data Analysts Lead in Volume, But Lag in Salary:** Data Analyst roles represent the largest share of the job market (196,593 postings) compared to Data Engineers (186,679) and Data Scientists (172,726). However, they have a lower baseline average salary (~$93.8K vs ~$130K+ for Engineering/Science).
 * **The "Big Three" Skills are Non-Negotiable:** For the absolute highest-paying remote roles, **SQL** (found in 80% of top jobs), **Python** (70%), and **Tableau** (60%) are the undisputed core technical requirements. Broadly across the industry, analyst tools are required in 62.7% of all data analyst postings.
@@ -175,6 +175,6 @@ This project uses the dataset from Luke Barousse's [SQL for Data Analytics cours
 * **Remote Work Pays a Modest Premium, But is Rare:** Only 6.78% of Data Analyst roles are marked as remote, and those roles offer a slightly higher average salary ($94,770) compared to non-remote roles ($93,765).
 * **Degrees Aren't Total Gatekeepers:** Jobs that don't explicitly mention a degree requirement still offer a highly competitive average salary of $92,951 — nearly identical to the $94,146 average of jobs that do flag degree status.
 
-## 📬 Connect With Me
+##  Connect With Me
 - **LinkedIn:** [shayan-hajian](https://www.linkedin.com/in/shayan-hajian)
 - **Email:** [Shayannhajiann@gmail.com](mailto:Shayannhajiann@gmail.com)
