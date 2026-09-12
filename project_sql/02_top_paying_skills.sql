@@ -26,9 +26,11 @@ SELECT
     skills,
     count (*) AS Number_of_appearance 
 FROM 
-    top_paying_jobs tpj, skills_job_dim sjd, skills_dim sd
-WHERE
-    tpj.job_id = sjd.job_id AND sjd.skill_id = sd.skill_id
+    top_paying_jobs tpj
+INNER JOIN skills_job_dim sjd 
+    ON tpj.job_id = sjd.job_id
+INNER JOIN skills_dim sd 
+    ON sjd.skill_id = sd.skill_id
 GROUP BY 
     sd.skills
 ORDER BY 
