@@ -1,5 +1,5 @@
 /*
-Comparing Data Analyst, Data Scientist, and Data Engineer roles by number of job postings, number of postings that contan annual salary data, average annual salary, number of remote jobs, and percentage of postings marked remote.
+Comparing Data Analyst, Data Scientist, and Data Engineer roles by number of job postings, number of postings that contain annual salary data, average annual salary, number of remote jobs, and percentage of postings marked remote.
 */
 
 SELECT

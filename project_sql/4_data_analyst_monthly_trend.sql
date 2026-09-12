@@ -1,5 +1,4 @@
 
-
 /*
 Analyzing data Analyst hirings, changed month by month.
 

@@ -1,5 +1,5 @@
 /*
-Here I wanted to see which companies had the most number of Data Analys positions. For each company, we will have number of Data Analyst postings,
+Here I wanted to see which companies had the most number of Data Analyst positions. For each company, we will have number of Data Analyst postings,
 remote postings, postings containing salary data, and average advertised salary.
 */
 
